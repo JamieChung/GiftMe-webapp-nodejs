@@ -1,0 +1,22 @@
+{
+  "name": "giftme-webapp",
+  "description": "Node.js web client for GiftMe",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.18"
+  },
+  "dependencies": {
+    "express": "latest",
+    "jade": "latest"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest"
+  }
+}
