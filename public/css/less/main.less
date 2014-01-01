@@ -1,2 +1,35 @@
+@import "http://fonts.googleapis.com/css?family=Lobster";
+
 @import "bootstrap3/bootstrap.less";
+
+html {
+  height:100%;
+}
+
+body {
+  background: #006677;
+  background: -moz-linear-gradient(45deg,  #006677 0%, #b1f8fb 100%);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#006677), color-stop(100%,#b1f8fb));
+  background: -webkit-linear-gradient(45deg,  #006677 0%,#b1f8fb 100%);
+  background: -o-linear-gradient(45deg,  #006677 0%,#b1f8fb 100%);
+  background: -ms-linear-gradient(45deg,  #006677 0%,#b1f8fb 100%);
+  background: linear-gradient(45deg,  #006677 0%,#b1f8fb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006677', endColorstr='#b1f8fb',GradientType=1 );
+}
+
+.hero {
+  margin-top: 150px;
+  text-align: center;
+
+  h1, h2.tagline {
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: 8em;
+    text-shadow: 2px 2px 2px #000;
+
+    &.tagline {
+      font-size: 2em;
+    }
+  }
+}
 
