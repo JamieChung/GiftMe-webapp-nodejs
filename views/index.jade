@@ -1,16 +1,26 @@
 doctype html
 html(lang="en")
-  head
-    title GiftMe -- Web App
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel="stylesheet", type="text/css" href="/css/main.min.css")
+    head
+        title GiftMe &mdash; Web App
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel="stylesheet", type="text/css" href="/css/main.min.css")
+    body
+        .container
+            #container-renderer
 
-    script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
-    script(type="text/javascript", src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js")
-    script(type="text/javascript", src="/js/main.min.js")
+        script(type="text/template")#home-view
+            .hero
+                h1 Gift Me
+                h2.tagline Let us help you with gift ideas for your friends and family.
+                br
+                //- fb:login-button(show-faces="true" width="200" max-rows="1")
+                button.guest-links.btn.btn-lg.btn-primary.facebook-authorize-button(type="button") Facebook Login
 
-  body
-    .container
-      .hero
-        h1 Gift Me
-        h2.tagline Let us help you with gift ideas for your friends and family.
+
+        script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+        script(type="text/javascript", src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js")
+        script(type="text/javascript", src="/js/underscore.min.js")
+        script(type="text/javascript", src="/js/backbone.min.js")
+        script(type="text/javascript", src="/js/jQuery.fb.js")
+        script(type="text/javascript", src="/js/jquery.cookie.js")
+        script(type="text/javascript", src="/js/main.min.js")
