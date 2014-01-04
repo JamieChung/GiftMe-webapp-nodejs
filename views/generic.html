@@ -1,0 +1,24 @@
+    <script type="text/template" id="error-generic-view">
+        <div class="alert alert-danger">
+            <span class="pull-right" style="font-size: 5em;">:(</span>
+            <h2 class="media-heading">Whoops!</h2>
+            <hr />
+            <% if ( message == null ) { %>
+                <p>Looks like we had a hiccup. Sorry about that.</p>
+            <% } else { %>
+                <p><%= message %></p>
+            <% } %>
+            <div class="clearfix"></div>
+        </div>
+    </script>
+
+    <script type="text/template" id="progress-generic-view">
+        <div class="well">
+            <p class="lead">Loading...</p>
+            <div class="progress progress-striped active">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                    <span class="sr-only">100% </span>
+                </div>
+            </div>
+        </div>
+    </script>

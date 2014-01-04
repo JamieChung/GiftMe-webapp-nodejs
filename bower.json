@@ -1,0 +1,23 @@
+{
+  "name": "giftme-webapp-nodejs",
+  "version": "1.0.0",
+  "homepage": "https://github.com/JamieChung/GiftMe-webapp-nodejs",
+  "authors": [
+    "Jamie Chung <me@jamiechung.me>"
+  ],
+  "description": "NodeJS Web Client for GiftMe",
+  "main": "server.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.3",
+    "underscore": "~1.5.2"
+  }
+}

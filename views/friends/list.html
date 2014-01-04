@@ -1,0 +1,30 @@
+﻿<script type="text/template" id="friends-list-view">
+    <h2>Friends</h2>
+    <% if ( friends.length == 0 ) { %>
+    <p class="alert alert-danger">Seems like you have no Facebook friends =/</p>
+    <% } %>
+    <div class="row">
+        <% friends.each(function(friend, i){ %>
+        <div class="col-lg-4">
+            <a href="/#friend/<%= friend.get('FacebookId') %>">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="<%= friend.get('ProfilePicUrl') %>" class="img-circle pull-left" />
+                    </div>
+                    <div class="col-md-10">
+                        <h3 class="media-heading"><%= friend.get('Name') %></h3>
+                        <% if ( friend.get('Birthday') ) { %>
+                        <small>Birthday: <%= friend.get('Birthday') %></small>
+                        <% } %>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <% if ( (i+1) % 3 == 0 && i > 0 && (i+1) != friends.length ) { %>
+        </div>
+        <br />
+        <div class="row">
+        <% } %>
+        <% }) %>
+    </div>
+</script>

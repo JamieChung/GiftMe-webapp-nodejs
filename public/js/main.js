@@ -322,29 +322,6 @@ $(document).ready(function () {
                         + ', user_relationship_details, friends_relationship_details'
                         + ', email, user_friends, friends_location';
                     window.top.location.href = encodeURI("https://www.facebook.com/dialog/oauth?client_id="+facebookAppID+"&redirect_uri="+window.location.protocol+"//"+window.location.hostname+":"+window.location.port+"&response_type=token&scope="+scope);
-
-                    /**
-                    FB.login(function (response) {
-
-                        console.log("User logged in! Going to landing page");
-                        currentUser.authenticate(response, function () {
-                            $('#container-renderer').html(progress_view());
-                            app_router.navigate("friends", { trigger: true });
-                        });
-                    },
-                    {
-                        redirect_uri: false,
-                        
-                        // List of profile permissions
-                        // https://developers.facebook.com/docs/reference/login/extended-profile-properties/
-                        scope: 'user_birthday, friends_birthday'
-                        + ', user_interests, friends_interests'
-                        + ', user_likes, friends_likes'
-                        + ', user_relationships, friends_relationships'
-                        + ', user_relationship_details, friends_relationship_details'
-                        + ', email, user_friends, friends_location'
-                    });
-                    **/
                 }
 
             });

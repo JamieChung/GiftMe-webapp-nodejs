@@ -1,0 +1,49 @@
+﻿<script type="text/template" id="friend-single-view">
+    <div class="media">
+        <img src="<%= friend.get('ProfilePicUrl') %>" class="img-circle pull-left media-object" />
+        <div class="media-body">
+            <h2 class="media-heading"><%= friend.get('Name') %></h2>
+            <p class="lead">Top gift suggestions for <%= friend.get('Name') %></p>
+        </div>
+    </div>
+    <div id="suggestions-renderer">
+    </div>
+</script>
+
+<script type="text/template" id="suggestions-list-view">
+    <div class="list-group">
+        <% _.each(suggestions, function(item){ %>
+        <% var image_url = item.get('ProductUrl') == item.get('ImageUrl') ? item.get('ImageUrlDefault') : item.get('ImageUrl') %>
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        <a href="<%= item.get('ProductUrl') %>">
+                            <img src="<%= image_url %>" class="img-circle" style="max-height:100px;" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h3 class="list-group-item-heading">
+                            <a href="<%= item.get('ProductUrl') %>">
+                                <%= item.get('Name') %>
+                            </a>
+                        </h3>
+                        <p><span class="label label-success" style="font-size:1.2em;"><%= item.get('Price') %></span></p>
+                        <hr />
+                        <p><small><span class="text-muted">Chosen because <%= friend.get('Name') %> likes:</span> <span><%= item.get('Reason').FacebookLike.Name %></span></small></p>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-success">
+                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                            Yes!
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-thumbs-down"></span>
+                            No!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</script>
+

@@ -16,6 +16,29 @@ html(lang="en")
                 //- fb:login-button(show-faces="true" width="200" max-rows="1")
                 button.guest-links.btn.btn-lg.btn-primary.facebook-authorize-button(type="button") Facebook Login
 
+        //- script(type="text/template")#error-generic-view
+        //-     .alert.alert-danger
+        //-         span.pull-right(style="font-size: 5em;") :(
+        //-         h2.media-heading Whoops!
+        //-         hr
+        //-         !<% if ( message == null ) { %>
+        //-             p Looks like we had a hiccup. Sorry about that.
+        //-         !<% } else { %>
+        //-             p !<%= message %>
+        //-         !<% } %>
+        //-         .clearfix
+
+        //- script(type="text/template")#progress-generic-view
+        //-     .well
+        //-         p.lead Loading...
+        //-         .progress.progress-striped.active
+        //-             .progress-bar(role="progressbar", aria-valuenow="100", aria-valuemin="0", aria-valuemax="100", style="width: 100%")
+        //-                 span.sr-only 100%
+
+        include generic.html
+        include friends/list.html
+        include friends/single.html
+        include account/account.html
 
         script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
         script(type="text/javascript", src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js")

@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "express": "latest",
-    "jade": "latest",
-    "connect": "latest"
+    "ejs": "latest",
+    "connect": "latest",
+    "bower": "latest",
+    "http-proxy": "latest"
   },
   "devDependencies": {
     "grunt": "latest",
