@@ -15,16 +15,16 @@ var environment = production;
 // Production
 var facebookAppID = '175469245988036';
 
-// Development
-if (window.location.hostname == 'localhost') {
-    facebookAppID = '458447817605220';
-    environment = development;
-}
-    // Staging?
-else if (window.location.hostname == 'a916c211b13a4344a98980e83a11ef77.cloudapp.net') {
-    facebookAppID = '358940620916752';
-    environment = staging;
-}
+// // Development
+// if (window.location.hostname == 'localhost') {
+//     facebookAppID = '458447817605220';
+//     environment = development;
+// }
+//     // Staging?
+// else if (window.location.hostname == 'a916c211b13a4344a98980e83a11ef77.cloudapp.net') {
+//     facebookAppID = '358940620916752';
+//     environment = staging;
+// }
 
 function error_view(message) {
     return _.template($('#error-generic-view').html(), { message: message });
