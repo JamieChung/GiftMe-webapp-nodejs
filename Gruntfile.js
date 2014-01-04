@@ -10,7 +10,9 @@ module.exports = function(grunt) {
             options: {},
             dist: {
                 files: {
-                    "public/js/main.min.js" : ["public/js/main.js"]
+                    "public/js/main.min.js" : ["public/js/main.js"],
+                    "public/js/underscore.min.js": ["public/js/underscore.js"],
+                    "public/js/backbone.min.js": ["public/js/backbone.js"]
                 }
             }
         }
