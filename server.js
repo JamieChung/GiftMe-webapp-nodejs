@@ -7,7 +7,7 @@ var http = require('http'),
 
 app.use(express.logger())
 app.use(express.static(__dirname + '/public'))
-app.use(express.bodyParser())
+// app.use(express.bodyParser())
 app.use(express.methodOverride())
 
 app.configure(function() {
